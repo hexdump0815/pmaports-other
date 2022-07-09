@@ -5,7 +5,7 @@
 _flavor="postmarketos-qcom-msm8916"
 pkgname=linux-$_flavor
 pkgver=5.18
-pkgrel=101
+pkgrel=103
 pkgdesc="Mainline kernel fork for Qualcomm MSM8916 devices"
 arch="aarch64 armv7"
 url="https://github.com/msm8916-mainline/linux"
@@ -45,7 +45,7 @@ source="
 	config-$_flavor.armv7
 	use-usb-host-mode.patch
 	mglru-v12-5.18.patch
-	v5.18.1.patch
+	v5.18.10.patch
 "
 builddir="$srcdir/linux-${_tag#v}"
 
@@ -76,9 +76,9 @@ package() {
 
 sha512sums="
 1433f960797289936f3b7d2aa76e1b299506c3e9db4b2c50b0cc291e3a7ca8eb54c5bde7e26865cad676386ba8795e070b1fed64db1cffb305da18a5f551ecba  linux-postmarketos-qcom-msm8916-v5.18-msm8916.tar.gz
-53d898a601f4576e1362e5458388e6f763bb844687be4ec4a4316aed198aad4a27a3befe76fea5698aa9f22d8770ce7e277b0b82cbbab58c4fdb5f33e2ac844a  config-postmarketos-qcom-msm8916.aarch64
+7ee1a8326c8420e3935cb58d117c2a5832fb9c718633717511b1a1da4231c5e20c0fb31a1129f34d15c13fe4e4ba3ecb74aad506a51bd8c07891c13223150353  config-postmarketos-qcom-msm8916.aarch64
 9ebefba76c62c5d9e7f14855a15878cd0ae32dc34b8a55f6d429fd7396d1891ddd9c73e6a5b3d0eb7a8c788876e652355c9c7c7df496a4e813486c4c55956048  config-postmarketos-qcom-msm8916.armv7
 a98a30b714d5b5117b61efe0ca5d402e0de2a4e3c8ccd76874a43452cf50a261b39d93b4ca58aa83ad2c49d2a571baea836d41668f11e6585ec1e341c61006af  use-usb-host-mode.patch
 a66b1ee6f4d6a42dc0b62ee2e8d4f6104ad15b144be39813b5060d886aba58e61d0acce085063f30e8256bc7a633c4210d36ed6964e628793e8ea59123fcace6  mglru-v12-5.18.patch
-fbaa0cfd7282fd6b1a5bd246cfbf060490b9cecb55152a623500e6e16cb6752fd19ecb4991922728846b0d6674ddb3c268757d448322eba3d9dada3be7a65e86  v5.18.1.patch
+be02b59f2cb2114a645efcb4224424b391eb9bcda526c215bea30ac99f2807e9ecfca539646b1d43f25a96db6877ee7722a7fb1dfa907882c8adfe467abe0ff1  v5.18.10.patch
 "
